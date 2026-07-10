@@ -1,0 +1,362 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Apply Job</title>
+
+    <link rel="stylesheet"
+          href="applyjobs.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+
+    <div class="top-bar">
+
+        <div>
+
+            <h1>
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+                Apply For Job
+
+            </h1>
+
+            <p>
+
+                Complete your application and submit it.
+
+            </p>
+
+        </div>
+
+        <button class="back-btn">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back
+
+        </button>
+
+    </div>
+
+
+    <!-- Search Job -->
+
+    <div class="card">
+
+        <div class="section-title">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            Search Job
+
+        </div>
+
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchJobId"
+                placeholder="Enter Job ID (Example: J300)">
+
+
+            <button id="searchBtn">
+
+                <i class="fa-solid fa-search"></i>
+
+                Search
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Main Card -->
+
+    <div class="application-card">
+
+
+        <!-- Job Information -->
+
+        <div class="card">
+
+            <div class="section-title">
+
+                <i class="fa-solid fa-briefcase"></i>
+
+                Job Information
+
+            </div>
+
+
+            <div class="grid">
+
+
+                <div class="info-box">
+
+                    <label>Job ID</label>
+
+                    <p id="jobId">
+                        -
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <label>Job Title</label>
+
+                    <p id="jobTitle">
+                        -
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <label>Company</label>
+
+                    <p id="company">
+                        -
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <label>Location</label>
+
+                    <p id="city">
+                        -
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <label>Salary</label>
+
+                    <p id="salary">
+                        -
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <label>Status</label>
+
+                    <span class="status">
+                        Available
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Student Information -->
+
+
+        <div class="card">
+
+
+            <div class="section-title">
+
+                <i class="fa-solid fa-user"></i>
+
+                Student Information
+
+            </div>
+
+
+            <div class="grid">
+
+
+                <div class="info-box">
+
+                    <label>Name</label>
+
+                    <p id="studentName">
+                        -
+                    </p>
+
+                </div>
+
+
+
+                <div class="info-box">
+
+                    <label>Email</label>
+
+                    <p id="studentEmail">
+                        -
+                    </p>
+
+                </div>
+
+
+
+                <div class="info-box full">
+
+
+                    <label>Resume</label>
+
+
+                    <div class="resume-card">
+
+
+                        <i class="fa-solid fa-file-pdf"></i>
+
+
+                        <span id="resumeName">
+
+                            -
+
+                        </span>
+
+
+                        <button class="view-btn">
+
+                            View
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+        <!-- Declaration -->
+
+
+        <div class="card">
+
+
+            <div class="section-title">
+
+
+                <i class="fa-solid fa-circle-check"></i>
+
+
+                Declaration
+
+
+            </div>
+
+
+
+            <label class="checkbox">
+
+
+                <input type="checkbox"
+                       id="agree">
+
+
+                <span>
+
+                    I confirm that all information provided is correct and I wish to submit this application.
+
+                </span>
+
+
+            </label>
+
+
+        </div>
+
+
+
+
+        <!-- Buttons -->
+
+
+        <div class="buttons">
+
+
+            <button class="cancel">
+
+
+                <i class="fa-solid fa-xmark"></i>
+
+
+                Cancel
+
+
+            </button>
+
+
+
+            <button class="apply" id="applyBtn">
+
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+
+                Apply Now
+
+
+            </button>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+</div>
+
+
+
+
+<script src="../js/config.js"></script>
+
+<script src="../js/applyjob.js"></script>
+
+
+</body>
+
+</html>
+```

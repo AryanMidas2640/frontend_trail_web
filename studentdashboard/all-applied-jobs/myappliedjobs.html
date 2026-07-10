@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Applied Jobs</title>
+
+    <link rel="stylesheet" href="myappliedjobs.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+
+    <div class="header">
+
+        <div>
+
+            <h1>
+
+                <i class="fa-solid fa-briefcase"></i>
+
+                My Applied Jobs
+
+            </h1>
+
+            <p>
+
+                Track all your submitted job applications.
+
+            </p>
+
+        </div>
+
+        <button class="back-btn">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back to Dashboard
+
+        </button>
+
+    </div>
+
+
+    <!-- Statistics -->
+
+    <div class="stats">
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-file-circle-check"></i>
+
+            <h2 id="totalJobs">0</h2>
+
+            <p>Total Applied</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-spinner"></i>
+
+            <h2 id="pendingJobs">0</h2>
+
+            <p>Pending</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <h2 id="acceptedJobs">0</h2>
+
+            <p>Accepted</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-circle-xmark"></i>
+
+            <h2 id="rejectedJobs">0</h2>
+
+            <p>Rejected</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Search & Filter -->
+
+    <div class="toolbar">
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-search"></i>
+
+            <input
+                type="text"
+                id="searchApplication"
+                placeholder="Search by Job Title...">
+
+        </div>
+
+        <select id="statusFilter">
+
+            <option value="">All Status</option>
+
+            <option>Applied</option>
+
+            <option>Pending</option>
+
+            <option>Accepted</option>
+
+            <option>Rejected</option>
+
+        </select>
+
+    </div>
+
+
+    <!-- Table -->
+
+    <div class="table-card">
+
+        <div class="table-header">
+
+            <h2>
+
+                Application History
+
+            </h2>
+
+        </div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Job ID</th>
+
+                    <th>Job Title</th>
+
+                    <th>Company</th>
+
+                    <th>Applied Date</th>
+
+                    <th>Status</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="applicationsTable">
+
+                <!-- Dynamic Data -->
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="../js/my-applied-jobs.js"></script>
+<script src="../js/config.js"></script>
+<script src="../js/myappliedjobs.js"></script>
+
+
+</body>
+
+</html>

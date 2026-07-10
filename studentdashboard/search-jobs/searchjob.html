@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Search Job</title>
+
+    <link rel="stylesheet"
+          href="searchjob.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    
+
+<div class="container">
+
+    <!-- Search Card -->
+
+    <div class="search-card">
+
+        <h1>
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            Search Job
+
+        </h1>
+
+        <p>
+
+            Enter Job ID to view complete job details.
+
+        </p>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="jobId"
+                placeholder="Enter Job ID (Example : J201)">
+
+            <button id="searchBtn">
+
+                <i class="fa-solid fa-search"></i>
+
+                Search
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Job Details -->
+
+    <div class="job-card">
+
+        <div class="job-header">
+
+            <div>
+
+                <h2 id="jobTitle">
+
+                    AI / ML Engineer
+
+                </h2>
+
+                <p id="company">
+
+                    Bajaj Pvt Ltd
+
+                </p>
+
+            </div>
+
+            <span class="status">
+
+                Active
+
+            </span>
+
+        </div>
+
+        <div class="job-grid">
+
+            <div class="box">
+
+                <h4>
+
+                    <i class="fa-solid fa-building"></i>
+
+                    Company
+
+                </h4>
+
+                <p id="companyName">
+
+                    Bajaj
+
+                </p>
+
+            </div>
+
+            <div class="box">
+
+                <h4>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Location
+
+                </h4>
+
+                <p id="city">
+
+                    Noida
+
+                </p>
+
+            </div>
+
+            <div class="box">
+
+                <h4>
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                    Job Type
+
+                </h4>
+
+                <p id="type">
+
+                    Full Time
+
+                </p>
+
+            </div>
+
+            <div class="box">
+
+                <h4>
+
+                    <i class="fa-solid fa-laptop"></i>
+
+                    Mode
+
+                </h4>
+
+                <p id="mode">
+
+                    Remote
+
+                </p>
+
+            </div>
+
+            <div class="box">
+
+                <h4>
+
+                    <i class="fa-solid fa-user-tie"></i>
+
+                    Experience
+
+                </h4>
+
+                <p id="experience">
+
+                    0-2 Years
+
+                </p>
+
+            </div>
+
+            <div class="box">
+
+                <h4>
+
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                    Salary
+
+                </h4>
+
+                <p id="salary">
+
+                    ₹20,000
+
+                </p>
+
+            </div>
+
+            <div class="box full">
+
+                <h4>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    Recruiter Email
+
+                </h4>
+
+                <p id="email">
+
+                    hr@company.com
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="buttons">
+
+            <button class="apply">
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+                Apply Now
+
+            </button>
+
+            <button class="back">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../js/config.js"></script>
+<script src="../js/searchjob.js"></script>
+
+</body>
+
+</html>

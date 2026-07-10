@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Resume Parsing</title>
+
+<link rel="stylesheet" href="resumeparsing.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+
+    <div class="header">
+
+        <div>
+
+            <h1>
+                <i class="fa-solid fa-file-arrow-up"></i>
+                Resume Parsing
+            </h1>
+
+            <p>
+                Upload your resume and extract important details automatically.
+            </p>
+
+        </div>
+
+        <button class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back
+        </button>
+
+    </div>
+
+    <!-- Upload Card -->
+
+    <div class="card">
+
+        <h2>Upload Resume PDF</h2>
+
+        <div class="upload-box">
+
+            <i class="fa-solid fa-file-pdf"></i>
+
+            <input
+                type="file"
+                id="resumeFile"
+                accept=".pdf">
+
+            <label>Required Skills</label>
+
+            <input
+                type="text"
+                id="skillsInput"
+                placeholder="Java, Spring Boot, SQL">
+
+            <label>Education</label>
+
+            <input
+                type="text"
+                id="educationInput"
+                placeholder="B.Tech CSE">
+
+            <button id="uploadBtn">
+                <i class="fa-solid fa-upload"></i>
+                Parse Resume
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Result -->
+
+    <div class="card">
+
+        <h2>Extracted Information</h2>
+
+        <div class="grid">
+
+            <div class="info">
+                <label>Name</label>
+                <p id="name">-</p>
+            </div>
+
+            <div class="info">
+                <label>Email</label>
+                <p id="email">-</p>
+            </div>
+
+            <div class="info">
+                <label>Phone</label>
+                <p id="phone">-</p>
+            </div>
+
+            <div class="info">
+                <label>Education</label>
+                <p id="education">-</p>
+            </div>
+
+            <div class="info">
+                <label>Skills</label>
+                <p id="skills">-</p>
+            </div>
+
+            <div class="info">
+                <label>Skill Match Count</label>
+                <p id="matchingCount">-</p>
+            </div>
+
+            <div class="info full">
+                <label>Experience</label>
+                <p id="experience">-</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../js/config.js"></script>
+<script src="../js/resumeparsing.js"></script>
+
+</body>
+</html>

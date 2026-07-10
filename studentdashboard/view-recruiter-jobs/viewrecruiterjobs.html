@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>View Recruiter Jobs</title>
+
+    <link rel="stylesheet" href="viewrecruiterjobs.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+
+    <div class="header">
+
+        <div>
+
+            <h1>
+                Recruiter Jobs
+            </h1>
+
+            <p>
+                View jobs posted by recruiters.
+            </p>
+
+        </div>
+
+        <button class="back-btn">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back to Dashboard
+
+        </button>
+
+    </div>
+
+
+    <!-- Search -->
+
+    <div class="filter-section">
+
+       <div class="search-box">
+
+    <i class="fa-solid fa-search"></i>
+
+    <input
+        type="text"
+        id="searchJob"
+        placeholder="Enter Recruiter Tenant ID">
+
+    <button id="searchBtn" class="search-btn">
+        Search
+    </button>
+
+</div>
+
+        <select id="companyFilter">
+
+            <option>All Companies</option>
+
+        </select>
+
+        <select id="locationFilter">
+
+            <option>All Locations</option>
+
+        </select>
+
+    </div>
+
+
+    <!-- Stats -->
+
+    <div class="stats">
+
+        <div class="stat-card">
+
+            <h2 id="totalJobs">
+
+                0
+
+            </h2>
+
+            <p>Total Jobs</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2 id="companies">
+
+                0
+
+            </h2>
+
+            <p>Companies</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2 id="locations">
+
+                0
+
+            </h2>
+
+            <p>Locations</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Table -->
+
+    <div class="table-card">
+
+        <div class="table-header">
+
+            <h2>
+
+                Recruiter Job Listings
+
+            </h2>
+
+        </div>
+
+        <table>
+
+            <thead>
+
+            <tr>
+
+                <th>Job ID</th>
+
+                <th>Job Title</th>
+
+                <th>Company</th>
+
+                <th>Location</th>
+
+                <th>Salary</th>
+
+                <th>Job Type</th>
+
+                <th>Experience</th>
+
+                <th>Action</th>
+
+            </tr>
+
+            </thead>
+
+            <tbody id="jobsTable">
+
+            <!-- Dynamic Data -->
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="../js/config.js"></script>
+<script src="../js/viewrecruiterjobs.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recruiter Dashboard</title>
+
+    <link rel="stylesheet" href="recuiter.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-briefcase"></i>
+
+            <div>
+
+                <h2>Placement Portal</h2>
+
+                <p>Recruiter Panel</p>
+
+            </div>
+
+        </div>
+
+        <ul>
+
+            <li class="active">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Dashboard</span>
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-plus"></i>
+
+                <span>Post Job</span>
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-briefcase"></i>
+
+                <span>My Jobs</span>
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-users"></i>
+
+                <span>Applicants</span>
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <span>Reports</span>
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-bell"></i>
+
+                <span>Notifications</span>
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>Profile</span>
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Settings</span>
+
+            </li>
+
+            <li class="logout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- ================= Main ================= -->
+
+    <main class="main">
+
+        <!-- Header -->
+
+        <header class="header">
+
+            <div>
+
+                <h1>
+
+                    Welcome,
+                    <span id="recruiterName">Loading...</span>
+                    👋
+
+                </h1>
+
+                <p>Recruiter Smart Hiring Dashboard</p>
+
+            </div>
+
+            <div class="header-right">
+
+                <div class="search">
+
+                    <i class="fa-solid fa-search"></i>
+
+                    <input type="text"
+                        placeholder="Search Jobs...">
+
+                </div>
+
+                <div class="notification">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span id="notificationCount">0</span>
+
+                </div>
+
+                <div class="profile">
+
+                    <img src="images/avatar.png">
+
+                    <div>
+
+                        <h4 id="profileName">
+
+                            Recruiter
+
+                        </h4>
+
+                        <p>Recruiter</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ================= Cards ================= -->
+
+        <section class="cards">
+
+            <div class="card">
+
+                <i class="fa-solid fa-briefcase"></i>
+
+                <div>
+
+                    <h2 id="postedJobs">0</h2>
+
+                    <p>Posted Jobs</p>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-users"></i>
+
+                <div>
+
+                    <h2 id="totalApplicants">0</h2>
+
+                    <p>Applicants</p>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <div>
+
+                    <h2 id="activeJobs">0</h2>
+
+                    <p>Active Jobs</p>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-star"></i>
+
+                <div>
+
+                    <h2 id="shortlisted">0</h2>
+
+                    <p>Shortlisted</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Recent Jobs ================= -->
+
+        <section class="jobs">
+
+            <div class="section-title">
+
+                <h2>Recent Job Posts</h2>
+
+                <a href="#">View All</a>
+
+            </div>
+
+            <div id="jobContainer">
+
+                <!-- Dynamic Job Cards -->
+
+            </div>
+
+        </section>
+
+        <!-- ================= Quick Actions ================= -->
+
+        <section class="actions">
+
+            <div class="action-card">
+
+                <i class="fa-solid fa-plus"></i>
+
+                <h3>Post Job</h3>
+
+            </div>
+
+            <div class="action-card">
+
+                <i class="fa-solid fa-briefcase"></i>
+
+                <h3>My Jobs</h3>
+
+            </div>
+
+            <div class="action-card">
+
+                <i class="fa-solid fa-users"></i>
+
+                <h3>Applicants</h3>
+
+            </div>
+
+            <div class="action-card">
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                <h3>Reports</h3>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Applicants ================= -->
+
+        <section class="table-section">
+
+            <div class="section-title">
+
+                <h2>Recent Applicants</h2>
+
+            </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Name</th>
+
+                        <th>Job</th>
+
+                        <th>Status</th>
+
+                        <th>Date</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="applicantTable">
+
+                    <!-- Dynamic Data -->
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/recruiter.js"></script>
+
+</body>
+
+</html>

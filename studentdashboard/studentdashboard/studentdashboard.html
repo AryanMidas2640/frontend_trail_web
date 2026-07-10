@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+
+    <link rel="stylesheet" href="studentdashboard.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <div>
+                <h2>Placement Portal</h2>
+                <p>Student Panel</p>
+            </div>
+        </div>
+
+        <ul>
+
+            <li class="active">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-briefcase"></i>
+                <span>View Recruiter Jobs</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-list"></i>
+                <span>All Jobs</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Search Job</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Apply Job</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-file-circle-check"></i>
+                <span>My Applications</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-file-arrow-up"></i>
+                <span>Resume Parsing</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-user"></i>
+                <span>Profile</span>
+            </li>
+
+            <li class="logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+        <!-- Header -->
+
+        <header class="header">
+
+            <div>
+
+                <h1>
+                    Welcome,
+                    <span id="studentName">Loading...</span>
+                    👋
+                </h1>
+
+                <p>Find your dream job today.</p>
+
+            </div>
+
+            <div class="header-right">
+
+                <div class="search">
+
+                    <i class="fa-solid fa-search"></i>
+
+                    <input
+                    type="text"
+                    placeholder="Search jobs...">
+
+                </div>
+
+                <div class="notification">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span id="notificationCount">
+                        0
+                    </span>
+
+                </div>
+
+                <div class="profile">
+
+                    <img src="images/user.png">
+
+                    <div>
+
+                        <h4 id="profileName">
+                            Student
+                        </h4>
+
+                        <p>Student</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- Cards -->
+
+        <section class="cards">
+
+            <div class="card">
+
+                <i class="fa-solid fa-briefcase"></i>
+
+                <div>
+
+                    <h2 id="totalJobs">
+                        0
+                    </h2>
+
+                    <p>Total Jobs</p>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+                <div>
+
+                    <h2 id="appliedJobs">
+                        0
+                    </h2>
+
+                    <p>Applied Jobs</p>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-star"></i>
+
+                <div>
+
+                    <h2 id="shortlisted">
+                        0
+                    </h2>
+
+                    <p>Shortlisted</p>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                <div>
+
+                    <h2 id="interviews">
+                        0
+                    </h2>
+
+                    <p>Interviews</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Recent Jobs -->
+
+        <section class="jobs">
+
+            <div class="section-title">
+
+                <h2>Recommended Jobs</h2>
+
+                <a href="#">View All</a>
+
+            </div>
+
+            <div id="jobContainer">
+
+                <!-- Dynamic Jobs -->
+
+            </div>
+
+        </section>
+
+        <!-- Quick Actions -->
+
+        <section class="actions">
+
+            <div class="action-card">
+
+                <i class="fa-solid fa-briefcase"></i>
+
+                <h3>View Jobs</h3>
+
+            </div>
+
+            <div class="action-card">
+
+                <i class="fa-solid fa-search"></i>
+
+                <h3>Search Job</h3>
+
+            </div>
+
+            <div class="action-card">
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+                <h3>Apply Job</h3>
+
+            </div>
+
+            <div class="action-card">
+
+                <i class="fa-solid fa-file-arrow-up"></i>
+
+                <h3>Resume Parsing</h3>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="../js/config.js"></script>
+
+
+<script>
+
+const menuItems = document.querySelectorAll(".sidebar ul li");
+
+// View Recruiter Jobs
+menuItems[1].onclick = () => {
+    window.location.href = "../view-recruiter-jobs/viewrecruiterjobs.html";
+};
+
+// All Jobs
+menuItems[2].onclick = () => {
+    window.location.href = "../all-jobs/alljobs.html";
+};
+
+// Search Job
+menuItems[3].onclick = () => {
+    window.location.href = "../search-jobs/searchjob.html";
+};
+
+// Apply Job
+menuItems[4].onclick = () => {
+    window.location.href = "../apply-jobs/applyjob.html";
+};
+
+// My Applications
+menuItems[5].onclick = () => {
+    window.location.href = "../all-applied-jobs/myappliedjobs.html";
+};
+
+// Resume Parsing
+menuItems[6].onclick = () => {
+
+    window.location.href =
+    "../resumeparsing/resumeparsing.html";
+
+};
+
+// Profile
+menuItems[7].onclick = () => {
+    alert("Profile Page Coming Soon");
+};
+
+// Logout
+menuItems[8].onclick = () => {
+    logout();
+};
+
+</script>
+
+</body>
+</html>
+
+</body>
+</html>

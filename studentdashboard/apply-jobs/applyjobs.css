@@ -1,0 +1,596 @@
+/* ==========================
+   GOOGLE FONT
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root{
+
+    --primary:#2563eb;
+    --secondary:#4f46e5;
+    --success:#10b981;
+    --danger:#ef4444;
+
+    --background:#eef4ff;
+    --card:#ffffff;
+
+    --text:#1e293b;
+    --light:#64748b;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+
+    background:linear-gradient(135deg,#edf4ff,#f7fbff);
+
+    min-height:100vh;
+
+    padding:40px;
+
+}
+
+
+/* ==========================
+        SEARCH JOB
+========================== */
+
+.search-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    margin-bottom:30px;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.08);
+
+    border:1px solid #e8eefb;
+
+}
+
+
+.search-box{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-top:20px;
+
+}
+
+
+.search-box input{
+
+    flex:1;
+
+    padding:16px 20px;
+
+    border-radius:14px;
+
+    border:1px solid #dbeafe;
+
+    outline:none;
+
+    font-size:16px;
+
+    color:#1e293b;
+
+    background:#f8fbff;
+
+    transition:.3s;
+
+}
+
+
+.search-box input:focus{
+
+    border-color:#2563eb;
+
+    background:white;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+
+.search-box button{
+
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+
+    color:white;
+
+    border:none;
+
+    padding:16px 32px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    transition:.35s;
+
+    box-shadow:0 12px 25px rgba(37,99,235,.25);
+
+}
+
+
+.search-box button:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .search-box{
+
+        flex-direction:column;
+
+    }
+
+
+    .search-box button{
+
+        justify-content:center;
+
+    }
+
+}
+
+
+
+/* ==========================
+        CONTAINER
+========================== */
+
+.container{
+
+    max-width:1300px;
+
+    margin:auto;
+
+}
+
+/* ==========================
+        HEADER
+========================== */
+
+.top-bar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+.top-bar h1{
+
+    font-size:38px;
+
+    font-weight:800;
+
+    color:#0f172a;
+
+}
+
+.top-bar p{
+
+    color:gray;
+
+    margin-top:8px;
+
+}
+
+.back-btn{
+
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+
+    color:white;
+
+    border:none;
+
+    padding:16px 28px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    box-shadow:0 12px 25px rgba(37,99,235,.25);
+
+}
+
+.back-btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* ==========================
+        MAIN CARD
+========================== */
+
+.application-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:30px;
+
+}
+
+/* ==========================
+        CARD
+========================== */
+
+.card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.08);
+
+    border:1px solid #e8eefb;
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+/* ==========================
+      SECTION TITLE
+========================== */
+
+.section-title{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#2563eb;
+
+    margin-bottom:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+/* ==========================
+        GRID
+========================== */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:22px;
+
+}
+
+/* ==========================
+        INFO BOX
+========================== */
+
+.info-box{
+
+    background:#f8fbff;
+
+    border:1px solid #e6efff;
+
+    border-radius:18px;
+
+    padding:22px;
+
+    transition:.35s;
+
+}
+
+.info-box:hover{
+
+    background:white;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 12px 28px rgba(37,99,235,.12);
+
+}
+
+.info-box label{
+
+    display:block;
+
+    color:#64748b;
+
+    font-size:14px;
+
+    margin-bottom:10px;
+
+}
+
+.info-box p{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#1e293b;
+
+}
+
+.full{
+
+    grid-column:1/-1;
+
+}
+
+/* ==========================
+       STATUS BADGE
+========================== */
+
+.status{
+
+    display:inline-block;
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-weight:700;
+
+}
+
+/* ==========================
+      RESUME CARD
+========================== */
+
+.resume-card{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    background:white;
+
+    border:2px dashed #2563eb;
+
+    border-radius:15px;
+
+    padding:18px;
+
+}
+
+.resume-card i{
+
+    font-size:28px;
+
+    color:#ef4444;
+
+}
+
+.resume-card span{
+
+    flex:1;
+
+    font-weight:600;
+
+}
+
+.view-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.view-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* ==========================
+        CHECKBOX
+========================== */
+
+.checkbox{
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:flex-start;
+
+    line-height:28px;
+
+    font-size:16px;
+
+}
+
+.checkbox input{
+
+    width:20px;
+
+    height:20px;
+
+    accent-color:#2563eb;
+
+    margin-top:5px;
+
+}
+
+/* ==========================
+         BUTTONS
+========================== */
+
+.buttons{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:18px;
+
+}
+
+.apply{
+
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+
+    color:white;
+
+    border:none;
+
+    padding:16px 35px;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    font-weight:700;
+
+    transition:.35s;
+
+    box-shadow:0 12px 25px rgba(37,99,235,.25);
+
+}
+
+.apply:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.cancel{
+
+    background:white;
+
+    color:#ef4444;
+
+    border:2px solid #ef4444;
+
+    padding:16px 35px;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+
+
+.cancel:hover{
+
+    background:#ef4444;
+
+    color:white;
+
+}
+
+/* ==========================
+      RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+    body{
+
+        padding:20px;
+
+    }
+
+    .top-bar{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+
+    }
+
+    .buttons{
+
+        flex-direction:column;
+
+    }
+
+    
+
+}
