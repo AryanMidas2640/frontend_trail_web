@@ -83,4 +83,26 @@ async function loginUser(e) {
 
     }
 
+    // ===============================
+// Forgot Password
+// ===============================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const forgotBtn = document.getElementById("forgotPassword");
+
+    if (forgotBtn) {
+
+        forgotBtn.addEventListener("click", function (e) {
+
+            e.preventDefault();
+
+            window.location.href = "../forgetpass/forgetpass.html";
+
+        });
+
+    }
+
+});
+
 }

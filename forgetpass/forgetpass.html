@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password | Placement Portal</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="forgetpass.css">
+</head>
+
+<body>
+
+<div class="background">
+    <span class="blob blob1"></span>
+    <span class="blob blob2"></span>
+    <span class="grid"></span>
+</div>
+
+<div class="container">
+
+    <!-- LEFT -->
+    <div class="left-panel">
+
+        <div class="logo">
+            <i class="ri-briefcase-4-fill"></i>
+            <span>Placement Portal</span>
+        </div>
+
+        <div class="hero-content">
+
+            <div class="tag">
+                <i class="ri-shield-check-line"></i>
+                Secure Account Recovery
+            </div>
+
+            <h1>Forgot your <span>Password?</span></h1>
+
+            <p>
+                Enter your registered email address and verify the OTP to reset
+                your password securely.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right-panel">
+
+        <div class="glass-card">
+
+            <div class="card-header">
+                <h2>Reset Password</h2>
+                <p>Complete the verification process.</p>
+            </div>
+
+            <form id="forgotForm" autocomplete="off">
+
+                <!-- EMAIL -->
+
+                <div class="input-group">
+
+                    <label for="email">Email Address</label>
+
+                    <div class="input-box">
+
+                        <i class="ri-mail-line"></i>
+
+                        <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                autocomplete="email"
+                                required
+                                placeholder="Enter your email">
+
+                    </div>
+
+                </div>
+
+                <button
+                        type="button"
+                        class="otp-btn"
+                        id="sendOtpBtn">
+
+                    <i class="ri-send-plane-fill"></i>
+                    Send OTP
+
+                </button>
+
+                <!-- OTP -->
+
+                <div
+                        class="input-group"
+                        id="otpSection"
+                        style="display:none;">
+
+                    <label for="otp">Verification Code</label>
+
+                    <div class="input-box">
+
+                        <i class="ri-shield-keyhole-line"></i>
+
+                        <input
+                                type="text"
+                                id="otp"
+                                name="otp"
+                                maxlength="6"
+                                placeholder="Enter OTP">
+
+                    </div>
+
+                </div>
+
+                <!-- PASSWORD -->
+
+                <div
+                        class="input-group"
+                        id="passwordSection"
+                        style="display:none;">
+
+                    <label for="newPassword">New Password</label>
+
+                    <div class="input-box">
+
+                        <i class="ri-lock-2-line"></i>
+
+                        <input
+                                type="password"
+                                id="newPassword"
+                                name="newPassword"
+                                placeholder="Enter new password">
+
+                    </div>
+
+                </div>
+
+                <!-- CONFIRM -->
+
+                <div
+                        class="input-group"
+                        id="confirmPasswordSection"
+                        style="display:none;">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="ri-lock-password-line"></i>
+
+                        <input
+                                type="password"
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                placeholder="Confirm password">
+
+                    </div>
+
+                </div>
+
+                <button
+                        type="submit"
+                        class="reset-btn"
+                        id="resetBtn"
+                        style="display:none;">
+
+                    <i class="ri-refresh-line"></i>
+                    Reset Password
+
+                </button>
+
+            </form>
+
+            <div class="footer-links">
+
+                <a href="../login/login.html">
+                    <i class="ri-arrow-left-line"></i>
+                    Back to Login
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../studentdashboard/js/config.js"></script>
+<script src="forgetpass.js"></script>
+
+</body>
+</html>
