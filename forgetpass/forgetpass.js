@@ -268,99 +268,53 @@ resetPassword
 
 async function resetPassword(e){
 
-
     e.preventDefault();
 
+    const email = emailInput.value.trim();
+    const otp = otpInput.value.trim();
+    const password = newPassword.value.trim();
+    const confirm = confirmPassword.value.trim();
 
-
-    const email =
-    emailInput.value.trim();
-
-
-    const password =
-    newPassword.value.trim();
-
-
-    const confirm =
-    confirmPassword.value.trim();
-
-
-
-    if(password!==confirm){
-
-
+    if(password !== confirm){
         alert("Passwords do not match");
-
         return;
-
     }
 
-
+    if(otp === ""){
+        alert("Enter OTP");
+        return;
+    }
 
     try{
 
-
-        const response =
-        await fetch(
+        const response = await fetch(
             BASE_URL + "/api/jobs/reset-password",
             {
-
-
-                method:"POST",
-
-
-                headers:{
-
-                    "Content-Type":"application/json"
-
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
                 },
-
-
-                body:JSON.stringify({
-
-                    email:email,
-
-                    newPassword:password
-
+                body: JSON.stringify({
+                    email: email,
+                    otp: otp,
+                    newPassword: password
                 })
-
-
             }
-
         );
 
-
-
-        const data =
-        await response.json();
-
-
+        const data = await response.json();
 
         alert(data.message);
 
-
-
         if(data.success){
-
-
-            window.location.href =
-            "../login/login.html";
-
-
+            window.location.href = "../login/login.html";
         }
 
-
-    }
-
-
-    catch(error){
+    }catch(error){
 
         console.log(error);
-
         alert("Reset Failed");
 
     }
-
-
 
 }

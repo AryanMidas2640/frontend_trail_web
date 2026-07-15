@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Job</title>
+
+    <link rel="stylesheet" href="jobpost.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="form-card">
+
+        <h1>
+            <i class="fa-solid fa-plus"></i>
+            Post New Job
+        </h1>
+
+        <p>Create a new job opening for students.</p>
+
+        <form id="jobForm">
+
+            <div class="grid">
+
+                <div class="input-box">
+                    <label>Job ID</label>
+                    <input type="text" id="jobId" placeholder="J300">
+                </div>
+
+                <div class="input-box">
+                    <label>Job Title</label>
+                    <input type="text" id="jobTitle" placeholder="Backend Engineer">
+                </div>
+
+                <div class="input-box">
+                    <label>Company Name</label>
+                    <input type="text" id="companyName" placeholder="Infosys">
+                </div>
+
+                <div class="input-box">
+                    <label>City</label>
+                    <input type="text" id="city" placeholder="Hyderabad">
+                </div>
+
+                <div class="input-box">
+                    <label>Job Type</label>
+
+                    <select id="jobType">
+                        <option>Full Time</option>
+                        <option>Part Time</option>
+                        <option>Internship</option>
+                        <option>Contract</option>
+                    </select>
+
+                </div>
+
+                <div class="input-box">
+                    <label>Work Mode</label>
+
+                    <select id="workMode">
+                        <option>Onsite</option>
+                        <option>Remote</option>
+                        <option>Hybrid</option>
+                    </select>
+
+                </div>
+
+                <div class="input-box">
+                    <label>Minimum Experience</label>
+                    <input type="number" id="minExperience" placeholder="2">
+                </div>
+
+                <div class="input-box">
+                    <label>Maximum Experience</label>
+                    <input type="number" id="maxExperience" placeholder="5">
+                </div>
+
+                <div class="input-box">
+                    <label>Salary (₹)</label>
+                    <input type="number" id="salary" placeholder="800000">
+                </div>
+
+                <div class="input-box">
+                    <label>Email</label>
+                    <input type="email" id="email" placeholder="company@gmail.com">
+                </div>
+
+            </div>
+
+            <div class="input-box full">
+                <label>Description</label>
+
+                <textarea
+                id="description"
+                rows="6"
+                placeholder="Enter complete job description"></textarea>
+
+            </div>
+
+            <button type="submit">
+                <i class="fa-solid fa-paper-plane"></i>
+                Post Job
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="jobpost.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+}
+
+.container{
+    width:95%;
+    max-width:1200px;
+    margin:30px auto;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.header h1{
+    color:#2563eb;
+    font-size:32px;
+}
+
+.header p{
+    color:#6b7280;
+    margin-top:8px;
+}
+
+.back-btn{
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    padding:12px 24px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#1d4ed8;
+}
+
+/* ================= SETTINGS GRID ================= */
+
+.settings-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:25px;
+}
+
+/* ================= SETTING CARD ================= */
+
+.setting-card{
+    background:#fff;
+    border-radius:16px;
+    padding:25px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    cursor:pointer;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.setting-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 28px rgba(0,0,0,.12);
+}
+
+/* ================= ICON ================= */
+
+.icon{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#dbeafe;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.icon i{
+    color:#2563eb;
+    font-size:28px;
+}
+
+/* ================= CONTENT ================= */
+
+.content{
+    flex:1;
+}
+
+.content h3{
+    color:#111827;
+    margin-bottom:8px;
+    font-size:20px;
+}
+
+.content p{
+    color:#6b7280;
+    font-size:15px;
+}
+
+/* ================= ARROW ================= */
+
+.arrow{
+    color:#9ca3af;
+    font-size:22px;
+}
+
+/* ================= LOGOUT CARD ================= */
+
+.logout-card{
+    border-left:5px solid #ef4444;
+}
+
+.logout-card .icon{
+    background:#fee2e2;
+}
+
+.logout-card .icon i{
+    color:#dc2626;
+}
+
+.logout-card:hover{
+    background:#fff5f5;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    .header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+    }
+
+    .settings-grid{
+        grid-template-columns:1fr;
+    }
+
+    .setting-card{
+        padding:20px;
+    }
+
+    .back-btn{
+        width:100%;
+    }
+
+}

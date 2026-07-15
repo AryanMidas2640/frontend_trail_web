@@ -48,29 +48,22 @@
 
             </li>
 
-            <li>
+            <li onclick="window.location.href='jobpost/jobpost.html'">
 
-                <i class="fa-solid fa-plus"></i>
+    <i class="fa-solid fa-plus"></i>
 
-                <span>Post Job</span>
+    <span>Post Job</span>
 
-            </li>
+</li>
 
-            <li>
-
-                <i class="fa-solid fa-briefcase"></i>
-
-                <span>My Jobs</span>
-
-            </li>
-
-            <li>
-
-                <i class="fa-solid fa-users"></i>
-
-                <span>Applicants</span>
-
-            </li>
+            <li onclick="window.location.href='./my_jobs/myjobs.html'">
+    <i class="fa-solid fa-briefcase"></i>
+    <span>My Jobs</span>
+</li>
+            <li onclick="window.location.href='./applicants/applicants.html'">
+    <i class="fa-solid fa-users"></i>
+    <span>Applicants</span>
+</li>
 
             <li>
 
@@ -80,37 +73,31 @@
 
             </li>
 
-            <li>
+            <li onclick="window.location.href='./notification/notification.html'">
+    <i class="fa-solid fa-bell"></i>
+    <span>Notifications</span>
+</li>
 
-                <i class="fa-solid fa-bell"></i>
+            <li onclick="window.location.href='./profile/profile.html'">
+    <i class="fa-solid fa-user"></i>
+    <span>Profile</span>
+</li>
 
-                <span>Notifications</span>
+            <li onclick="window.location.href='./setting/setting.html'">
 
-            </li>
+    <i class="fa-solid fa-gear"></i>
 
-            <li>
+    <span>Settings</span>
 
-                <i class="fa-solid fa-user"></i>
+</li>
 
-                <span>Profile</span>
+            <li class="logout" onclick="logout()">
 
-            </li>
+    <i class="fa-solid fa-right-from-bracket"></i>
 
-            <li>
+    <span>Logout</span>
 
-                <i class="fa-solid fa-gear"></i>
-
-                <span>Settings</span>
-
-            </li>
-
-            <li class="logout">
-
-                <i class="fa-solid fa-right-from-bracket"></i>
-
-                <span>Logout</span>
-
-            </li>
+</li>
 
         </ul>
 
@@ -149,13 +136,10 @@
 
                 </div>
 
-                <div class="notification">
-
-                    <i class="fa-solid fa-bell"></i>
-
-                    <span id="notificationCount">0</span>
-
-                </div>
+                <li onclick="window.location.href='./notification/notification.html'">
+    <i class="fa-solid fa-bell"></i>
+    <span>Notifications</span>
+</li>
 
                 <div class="profile">
 
@@ -189,7 +173,7 @@
 
                 <div>
 
-                    <h2 id="postedJobs">0</h2>
+                    <h2 id="postedJobs">4</h2>
 
                     <p>Posted Jobs</p>
 
@@ -203,7 +187,7 @@
 
                 <div>
 
-                    <h2 id="totalApplicants">0</h2>
+                    <h2 id="totalApplicants">2</h2>
 
                     <p>Applicants</p>
 
@@ -217,7 +201,7 @@
 
                 <div>
 
-                    <h2 id="activeJobs">0</h2>
+                    <h2 id="activeJobs">4</h2>
 
                     <p>Active Jobs</p>
 
@@ -341,7 +325,7 @@
 
 </div>
 
-<script src="js/recruiter.js"></script>
+<script src="recruiter.js"></script>
 
 </body>
 

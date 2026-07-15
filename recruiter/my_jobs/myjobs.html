@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Jobs</title>
+
+    <link rel="stylesheet" href="myjobs.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header class="header">
+
+        <h1>
+            <i class="fa-solid fa-briefcase"></i>
+            My Posted Jobs
+        </h1>
+
+        <button class="back-btn" onclick="history.back()">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back
+        </button>
+
+    </header>
+
+    <div class="summary">
+
+        <div class="card">
+            <i class="fa-solid fa-briefcase"></i>
+            <h2 id="postedJobs">0</h2>
+            <p>Total Jobs</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-circle-check"></i>
+            <h2 id="activeJobs">0</h2>
+            <p>Active Jobs</p>
+        </div>
+
+    </div>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Job ID</th>
+                    <th>Job Title</th>
+                    <th>Company</th>
+                    <th>City</th>
+                    <th>Job Type</th>
+                    <th>Work Mode</th>
+                    <th>Experience</th>
+                    <th>Salary</th>
+                    <th>Email</th>
+                    <th>Description</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="jobTableBody">
+
+                <!-- Dynamic Rows -->
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="myjobs.js"></script>
+
+</body>
+
+</html>

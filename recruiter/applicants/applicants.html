@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Applicants</title>
+
+    <link rel="stylesheet" href="applicants.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+
+    <header class="header">
+
+        <div>
+            <h1>
+                <i class="fa-solid fa-users"></i>
+                Applicants
+            </h1>
+
+            <p>Manage all candidates who applied for your jobs.</p>
+        </div>
+
+        <button class="back-btn" onclick="history.back()">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back
+        </button>
+
+    </header>
+
+    <!-- Summary -->
+
+    <section class="cards">
+
+        <div class="card">
+
+            <i class="fa-solid fa-users"></i>
+
+            <h2 id="totalApplicants">0</h2>
+
+            <p>Total Applicants</p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-hourglass-half"></i>
+
+            <h2 id="pendingApplicants">0</h2>
+
+            <p>Applied</p>
+
+        </div>
+
+    </section>
+
+    <!-- Applicants Table -->
+
+    <section class="table-section">
+
+        <div class="table-header">
+
+            <h2>Applicants List</h2>
+
+        </div>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Student Name</th>
+                        <th>Username</th>
+                        <th>Resume</th>
+                        <th>Job ID</th>
+                        <th>Job Title</th>
+                        <th>Company</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="applicantTableBody">
+
+                    <!-- Dynamic Data -->
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="applicants.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recruiter Profile</title>
+
+    <link rel="stylesheet" href="profile.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+
+    <header class="header">
+
+        <h1>
+
+            <i class="fa-solid fa-user"></i>
+
+            Recruiter Profile
+
+        </h1>
+
+        <button class="back-btn" onclick="history.back()">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back
+
+        </button>
+
+    </header>
+
+    <!-- Profile Card -->
+
+    <div class="profile-card">
+
+        <div class="profile-top">
+
+            <img src="../images/avatar.png" alt="Profile">
+
+            <h2 id="name">Loading...</h2>
+
+            <p id="role">Recruiter</p>
+
+        </div>
+
+        <div class="profile-details">
+
+            <div class="detail">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <div>
+
+                    <label>Email</label>
+
+                    <p id="email">Loading...</p>
+
+                </div>
+
+            </div>
+
+            <div class="detail">
+
+                <i class="fa-solid fa-building"></i>
+
+                <div>
+
+                    <label>Company</label>
+
+                    <p id="company">Loading...</p>
+
+                </div>
+
+            </div>
+
+            <div class="detail">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <div>
+
+                    <label>City</label>
+
+                    <p id="city">Loading...</p>
+
+                </div>
+
+            </div>
+
+            <div class="detail">
+
+                <i class="fa-solid fa-phone"></i>
+
+                <div>
+
+                    <label>Phone</label>
+
+                    <p id="phone">Loading...</p>
+
+                </div>
+
+            </div>
+
+            <div class="detail">
+
+                <i class="fa-solid fa-id-badge"></i>
+
+                <div>
+
+                    <label>Tenant ID</label>
+
+                    <p id="tenantId">Loading...</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="actions">
+
+            <button class="edit-btn">
+
+                <i class="fa-solid fa-pen"></i>
+
+                Edit Profile
+
+            </button>
+
+            <button class="password-btn">
+
+                <i class="fa-solid fa-lock"></i>
+
+                Change Password
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="profile.js"></script>
+
+</body>
+
+</html>

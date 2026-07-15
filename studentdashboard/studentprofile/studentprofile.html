@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | HiringNest</title>
+
+    <link rel="stylesheet" href="studentprofile.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="profile-card">
+
+        <h1>My Profile</h1>
+
+        <p class="subtitle">
+            Manage your account information
+        </p>
+
+        <div class="profile-section">
+
+            <div class="left">
+
+                <img
+                        src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                        id="profilePreview"
+                        class="profile-img"
+                >
+
+                <input
+                        type="file"
+                        id="profileImage"
+                        accept="image/*"
+                        hidden
+                >
+
+                <button id="uploadBtn">
+                    <i class="ri-camera-line"></i>
+                    Change Photo
+                </button>
+
+            </div>
+
+            <div class="right">
+
+                <div class="input-box">
+
+                    <label>
+                        Username
+                    </label>
+
+                    <input
+                            type="text"
+                            id="username"
+                            readonly
+                    >
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>
+                        Email
+                    </label>
+
+                    <input
+                            type="email"
+                            id="email"
+                            readonly
+                    >
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>
+                        Role
+                    </label>
+
+                    <input
+                            type="text"
+                            id="role"
+                            readonly
+                    >
+
+                </div>
+
+                <div class="input-box password-box">
+
+                    <label>
+                        Password
+                    </label>
+
+                    <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter New Password"
+                    >
+
+                    <i
+                            class="ri-eye-line"
+                            id="togglePassword">
+                    </i>
+
+                </div>
+
+                <div class="buttons">
+
+                    <button
+                            class="save-btn"
+                            id="saveBtn">
+
+                        <i class="ri-save-line"></i>
+
+                        Save Changes
+
+                    </button>
+
+                    <button
+                            class="cancel-btn"
+                            onclick="history.back()">
+
+                        <i class="ri-arrow-left-line"></i>
+
+                        Back
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../config.js"></script>
+<script src="profile.js"></script>
+
+</body>
+
+</html>
