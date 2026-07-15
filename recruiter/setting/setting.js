@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:1010";
+const BASE_URL = "https://hiringnest-trail-backend-code.onrender.com";
 
 async function logout() {
 

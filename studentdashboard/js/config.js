@@ -2,9 +2,9 @@
 // Placement Portal Configuration
 // ======================================
 
-//const BASE_URL = "https://hiringnest-trail-backend-code.onrender.com";
+const BASE_URL = "https://hiringnest-trail-backend-code.onrender.com";
 
-const BASE_URL ="http://localhost:1010"
+//const BASE_URL ="http://localhost:1010"
 
 // Agar future me Render ya Railway pe deploy karega
 // const BASE_URL = "https://your-domain.com";
