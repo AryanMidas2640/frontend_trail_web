@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jobs List</title>
+
+    <link rel="stylesheet" href="job.css">
+
+</head>
+
+<body>
+
+    <div class="jobs-container">
+
+        <div class="table-header">
+
+            <h2>Jobs Management</h2>
+
+            <input
+                type="text"
+                id="jobSearch"
+                placeholder="Search Job Title, Company..."
+            >
+
+        </div>
+
+        <div class="table-responsive">
+
+            <table id="jobsTable">
+
+                <thead>
+
+                    <tr>
+
+                        <th>#</th>
+                        <th>Job ID</th>
+                        <th>Job Title</th>
+                        <th>Company</th>
+                        <th>City</th>
+                        <th>Job Type</th>
+                        <th>Work Mode</th>
+                        <th>Experience</th>
+                        <th>Salary</th>
+                        <th>Recruiter Email</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="jobsBody">
+
+                    <!-- Dynamic Data -->
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="job.js"></script>
+
+</body>
+
+</html>

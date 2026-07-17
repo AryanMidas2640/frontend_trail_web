@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#eef3fb;
+    padding:35px;
+}
+
+/* ============================
+        MAIN CONTAINER
+=============================*/
+
+.students-container{
+
+    width:100%;
+    background:#fff;
+    border-radius:22px;
+    padding:35px;
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.08),
+        0 2px 8px rgba(0,0,0,.04);
+
+    animation:fadeIn .6s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ============================
+          HEADER
+=============================*/
+
+.table-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+    flex-wrap:wrap;
+    gap:20px;
+
+}
+
+.table-header h2{
+
+    font-size:30px;
+    font-weight:700;
+    color:#1e293b;
+
+}
+
+.table-header input{
+
+    width:340px;
+    height:48px;
+    border:none;
+    outline:none;
+    background:#f8faff;
+    border-radius:12px;
+    padding:0 18px;
+    font-size:15px;
+
+    box-shadow:
+        inset 0 0 0 1px #d9e2f1;
+
+    transition:.3s;
+
+}
+
+.table-header input:focus{
+
+    background:#fff;
+
+    box-shadow:
+        0 0 0 4px rgba(37,99,235,.12),
+        inset 0 0 0 1px #2563eb;
+
+}
+
+/* ============================
+        TABLE
+=============================*/
+
+.table-responsive{
+
+    overflow:auto;
+    border-radius:18px;
+
+}
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+    min-width:1050px;
+
+}
+
+/* ============================
+      TABLE HEADER
+=============================*/
+
+thead{
+
+    background:linear-gradient(135deg,#2563eb,#3b82f6);
+
+}
+
+thead th{
+
+    color:white;
+    font-size:15px;
+    font-weight:600;
+    letter-spacing:.4px;
+    padding:18px;
+    text-align:left;
+
+}
+
+/* ============================
+      TABLE BODY
+=============================*/
+
+tbody tr{
+
+    transition:.3s;
+    border-bottom:1px solid #edf2f7;
+
+}
+
+tbody tr:nth-child(even){
+
+    background:#fbfcff;
+
+}
+
+tbody tr:hover{
+
+    background:#edf4ff;
+
+    transform:scale(1.01);
+
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+
+}
+
+tbody td{
+
+    padding:18px;
+    color:#334155;
+    font-size:14px;
+    font-weight:500;
+
+}
+
+/* ============================
+         STATUS
+=============================*/
+
+.online{
+
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+
+    background:#dcfce7;
+    color:#15803d;
+
+    padding:7px 16px;
+
+    border-radius:30px;
+
+    font-size:13px;
+    font-weight:600;
+
+}
+
+.online::before{
+
+    content:"";
+    width:8px;
+    height:8px;
+    background:#16a34a;
+    border-radius:50%;
+
+}
+
+.offline{
+
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+
+    background:#fee2e2;
+    color:#dc2626;
+
+    padding:7px 16px;
+
+    border-radius:30px;
+
+    font-size:13px;
+    font-weight:600;
+
+}
+
+.offline::before{
+
+    content:"";
+    width:8px;
+    height:8px;
+    background:#dc2626;
+    border-radius:50%;
+
+}
+
+/* ============================
+         SCROLLBAR
+=============================*/
+
+.table-responsive::-webkit-scrollbar{
+
+    height:8px;
+
+}
+
+.table-responsive::-webkit-scrollbar-thumb{
+
+    background:#3b82f6;
+    border-radius:20px;
+
+}
+
+/* ============================
+        RESPONSIVE
+=============================*/
+
+@media(max-width:900px){
+
+.table-header{
+
+    flex-direction:column;
+    align-items:flex-start;
+
+}
+
+.table-header input{
+
+    width:100%;
+
+}
+
+.students-container{
+
+    padding:22px;
+
+}
+
+}

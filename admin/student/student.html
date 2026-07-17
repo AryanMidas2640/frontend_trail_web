@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Students List</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="student.css">
+</head>
+
+<body>
+
+    <div class="students-container">
+
+        <div class="table-header">
+            <h2>Students List</h2>
+
+            <input
+                type="text"
+                id="studentSearch"
+                placeholder="Search by username..."
+            >
+        </div>
+
+        <div class="table-responsive">
+
+            <table id="studentsTable">
+
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Tenant ID</th>
+                        <th>Status</th>
+                        <th>Last Login</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentsBody">
+                    <!-- Students will load here -->
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="student.js"></script>
+
+</body>
+</html>
