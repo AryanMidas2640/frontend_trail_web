@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reports Dashboard</title>
+
+    <link rel="stylesheet" href="report.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="report-container">
+
+    <!-- ================= HEADER ================= -->
+
+    <div class="report-header">
+
+        <div>
+
+            <h1>
+                <i class="fa-solid fa-chart-line"></i>
+                Reports Dashboard
+            </h1>
+
+            <p>Placement Portal Analytics & Reports</p>
+
+        </div>
+
+        <div class="report-actions">
+
+            <button id="pdfBtn">
+                <i class="fa-solid fa-file-pdf"></i>
+                Export PDF
+            </button>
+
+            <button id="excelBtn">
+                <i class="fa-solid fa-file-excel"></i>
+                Export Excel
+            </button>
+
+            <button id="printBtn">
+                <i class="fa-solid fa-print"></i>
+                Print
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ================= SUMMARY ================= -->
+
+    <section class="summary-cards">
+
+        <div class="card">
+
+            <i class="fa-solid fa-user-graduate"></i>
+
+            <h2 id="studentCount">0</h2>
+
+            <p>Total Students</p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-user-tie"></i>
+
+            <h2 id="recruiterCount">0</h2>
+
+            <p>Total Recruiters</p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-briefcase"></i>
+
+            <h2 id="jobCount">0</h2>
+
+            <p>Total Jobs</p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-file-circle-check"></i>
+
+            <h2 id="applicationCount">0</h2>
+
+            <p>Total Applications</p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= BAR ================= -->
+
+    <section class="chart-card">
+
+        <h2>Overall Statistics</h2>
+
+        <canvas id="barChart"></canvas>
+
+    </section>
+
+    <!-- ================= PIE + DOUGHNUT ================= -->
+
+    <section class="chart-grid">
+
+        <div class="chart-card">
+
+            <h2>Application Status</h2>
+
+            <canvas id="pieChart"></canvas>
+
+        </div>
+
+        <div class="chart-card">
+
+            <h2>Company Wise Jobs</h2>
+
+            <canvas id="doughnutChart"></canvas>
+
+        </div>
+
+    </section>
+
+    <!-- ================= LINE ================= -->
+
+    <section class="chart-card">
+
+        <h2>Monthly Applications</h2>
+
+        <canvas id="lineChart"></canvas>
+
+    </section>
+
+    <!-- ================= HORIZONTAL ================= -->
+
+    <section class="chart-card">
+
+        <h2>Top Recruiters</h2>
+
+        <canvas id="horizontalChart"></canvas>
+
+    </section>
+
+    <!-- ================= TABLE ================= -->
+
+    <section class="table-card">
+
+        <div class="table-title">
+
+            <h2>Recent Applications</h2>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search...">
+
+        </div>
+
+        <div class="table-responsive">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>#</th>
+
+                        <th>Student</th>
+
+                        <th>Job</th>
+
+                        <th>Company</th>
+
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="recentApplications">
+
+                    <!-- Dynamic -->
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</div>
+
+<!-- Chart JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="report.js"></script>
+
+</body>
+
+</html>

@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Students
     const studentsBtn = document.getElementById("studentsBtn");
-
     if (studentsBtn) {
         studentsBtn.addEventListener("click", () => {
             window.location.href = "student/student.html";
@@ -11,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Recruiters
     const recruitersBtn = document.getElementById("recruitersBtn");
-
     if (recruitersBtn) {
         recruitersBtn.addEventListener("click", () => {
             window.location.href = "recruiter/recruiter.html";
@@ -20,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Jobs
     const jobsBtn = document.getElementById("jobsBtn");
-
     if (jobsBtn) {
         jobsBtn.addEventListener("click", () => {
             window.location.href = "job/job.html";
@@ -28,20 +25,39 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Applications
-   const applicationsBtn = document.getElementById("applicationsBtn");
+    const applicationsBtn = document.getElementById("applicationsBtn");
+    if (applicationsBtn) {
+        applicationsBtn.addEventListener("click", () => {
+            window.location.href = "application/application.html";
+        });
+    }
 
-console.log(applicationsBtn);
+    // Reports
+    const reportsBtn = document.getElementById("reportsBtn");
+    console.log(reportsBtn);
 
-if (applicationsBtn) {
+    if (reportsBtn) {
+        reportsBtn.addEventListener("click", () => {
+            console.log("Reports Clicked");
+            window.location.href = "report/report.html";
+        });
+    }
 
-    applicationsBtn.addEventListener("click", () => {
+  
 
-        console.log("Applications Clicked");
+});
+  document.addEventListener("DOMContentLoaded", () => {
 
-        window.location.href = "application/application.html";
+    const notificationBtn = document.getElementById("notificationBtn");
 
-    });
+    if (notificationBtn) {
 
-}
+        notificationBtn.addEventListener("click", () => {
+
+            window.location.href = "notification/notification.html";
+
+        });
+
+    }
 
 });

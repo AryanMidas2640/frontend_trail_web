@@ -1,13 +1,14 @@
-//const BASE_URL = "https://hiringnest-trail-backend-code.onrender.com";
-
-const BASE_URL = "http://localhost:1010";
-// ya Render URL
+// const BASE_URL = "https://hiringnest-trail-backend-code.onrender.com";
+const BASE_URL = "https://hiringnest-trail-backend-code.onrender.com";
 
 async function loadApplications() {
 
     const token =
         localStorage.getItem("jwt") ||
         localStorage.getItem("token");
+
+    console.log("TOKEN =", token);
+    console.log("Authorization =", "Bearer " + token);
 
     try {
 
@@ -22,6 +23,8 @@ async function loadApplications() {
             }
         );
 
+        console.log("Status =", response.status);
+
         if (!response.ok) {
             throw new Error("Failed to load applications");
         }
@@ -33,13 +36,14 @@ async function loadApplications() {
         displayApplications(applications);
 
     } catch (err) {
-        console.error(err);
+        console.error("Error:", err);
     }
 }
 
 function displayApplications(applications) {
 
-    const tbody = document.getElementById("applicationTable");
+    // ✅ Correct tbody ID
+    const tbody = document.getElementById("applicationsBody");
 
     tbody.innerHTML = "";
 
@@ -54,6 +58,7 @@ function displayApplications(applications) {
                 <td>${app.jobId}</td>
                 <td>${app.jobTitle}</td>
                 <td>${app.companyName}</td>
+                <td>${app.tenantId}</td>
                 <td>${app.status}</td>
             </tr>
         `;
