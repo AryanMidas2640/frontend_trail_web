@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notifications</title>
+
+    <link rel="stylesheet" href="notify.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+
+    <header class="header">
+
+        <div class="header-left">
+
+            <button class="back-btn" onclick="history.back()">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+            </button>
+
+            <div>
+
+                <h1>
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    Notifications
+
+                </h1>
+
+                <p>
+                    Stay updated with all placement activities
+                </p>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- Summary -->
+
+    <section class="summary">
+
+        <div class="summary-card total">
+
+            <div class="icon">
+
+                <i class="fa-solid fa-bell"></i>
+
+            </div>
+
+            <div>
+
+                <h2 id="totalNotifications">0</h2>
+
+                <p>Total Notifications</p>
+
+            </div>
+
+        </div>
+
+        <div class="summary-card unread">
+
+            <div class="icon">
+
+                <i class="fa-solid fa-envelope-open"></i>
+
+            </div>
+
+            <div>
+
+                <h2 id="unreadNotifications">0</h2>
+
+                <p>Unread Notifications</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Notification List -->
+
+    <section class="notification-section">
+
+        <div class="section-header">
+
+            <h2>
+
+                <i class="fa-solid fa-list"></i>
+
+                Recent Notifications
+
+            </h2>
+
+        </div>
+
+        <div id="notificationContainer">
+
+            <!-- Dynamic Notifications -->
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="notify.js"></script>
+
+</body>
+
+</html>

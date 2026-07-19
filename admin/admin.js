@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         notificationBtn.addEventListener("click", () => {
 
-            window.location.href = "notification/notification.html";
+            window.location.href = "notify/notify.html";
 
         });
 

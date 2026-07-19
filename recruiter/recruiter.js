@@ -415,3 +415,18 @@ async function logout(){
 
 
 }
+document.addEventListener("DOMContentLoaded", () => {
+
+    const notificationBtn = document.getElementById("notificationBtn");
+
+    if (notificationBtn) {
+
+        notificationBtn.addEventListener("click", () => {
+
+            window.location.href = "notify/notify.html";
+
+        });
+
+    }
+
+});
