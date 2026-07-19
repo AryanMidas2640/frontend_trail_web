@@ -60,4 +60,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+document.getElementById("settingsBtn").addEventListener("click", function () {
+    window.location.href = "settings/settings.html";
+});
+
+
+
 });
