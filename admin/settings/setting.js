@@ -1,4 +1,6 @@
-const BASE_URL = "https://hiringnest-trail-backend-code.onrender.com";
+const BASE_URL = "https://hiringnest-trail-backend-code.onrender.com"
+//const BASE_URL = "http://localhost:1010";
+
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -26,34 +28,33 @@ async function loadProfile() {
 
     const token = localStorage.getItem("jwt") || localStorage.getItem("token");
 
+    console.log("TOKEN =", token);
+
     if (!token) {
         alert("Please login first.");
-        window.location.href = "login.html";
         return;
     }
 
     try {
 
-        // TODO : Replace with your profile API
-        /*
-        const response = await fetch(`${BASE_URL}/api/jobs/profile`, {
+        const response = await fetch(BASE_URL + "/api/jobs/profile", {
+            method: "GET",
             headers: {
-                Authorization: `Bearer ${token}`
+                "Authorization": "Bearer " + token,
+                "Content-Type": "application/json"
             }
         });
 
-        const data = await response.json();
-        */
+        console.log("STATUS =", response.status);
 
-        // Temporary Data
-        const data = {
-            username: "ad1",
-            email: "rishu26400@gmail.com",
-            role: "ADMIN",
-            tenantId: "TEN73568",
-            online: true,
-            lastLogin: "2026-07-19T09:02:56"
-        };
+        const data = await response.json();
+
+        console.log("DATA =", data);
+
+        if (!response.ok) {
+            alert(data.message || "Unable to load profile.");
+            return;
+        }
 
         document.getElementById("username").value = data.username;
         document.getElementById("email").value = data.email;
@@ -61,17 +62,12 @@ async function loadProfile() {
         document.getElementById("tenantId").value = data.tenantId;
         document.getElementById("status").value = data.online ? "Online" : "Offline";
         document.getElementById("lastLogin").value =
-            new Date(data.lastLogin).toLocaleString();
+            data.lastLogin ? new Date(data.lastLogin).toLocaleString() : "";
 
     } catch (error) {
-
-        console.error(error);
-        alert("Unable to load profile.");
-
+        console.error("LOAD PROFILE ERROR =", error);
     }
-
 }
-
 
 
 // =======================================
@@ -84,26 +80,57 @@ async function updateProfile() {
     const email = document.getElementById("email").value.trim();
 
     if (!username || !email) {
-
         alert("Please fill all fields.");
         return;
-
     }
 
-    console.log("Username :", username);
-    console.log("Email :", email);
+    const token =
+        localStorage.getItem("jwt") ||
+        localStorage.getItem("token");
 
-    // TODO : PUT API
+    try {
 
-    alert("Profile Updated Successfully.");
+        const response = await fetch(
+            BASE_URL + "/api/jobs/update-profile",
+            {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer " + token
+                },
+                body: JSON.stringify({
+                    username: username,
+                    email: email
+                })
+            }
+        );
 
+        const data = await response.json();
+
+        if (response.ok) {
+
+            alert(data.message);
+
+        } else {
+
+            alert(data.message || "Profile update failed.");
+
+        }
+
+    } catch (error) {
+
+        console.error(error);
+        alert("Server Error.");
+
+    }
 }
-
-
 
 // =======================================
 // CHANGE PASSWORD
 // =======================================
+
+//const BASE_URL = "http://localhost:1010";
+// ya tera Render URL agar deployment pe use kar raha hai
 
 async function changePassword() {
 
@@ -112,28 +139,59 @@ async function changePassword() {
     const confirmPassword = document.getElementById("confirmPassword").value;
 
     if (!currentPassword || !newPassword || !confirmPassword) {
-
         alert("Please fill all fields.");
         return;
-
     }
 
     if (newPassword !== confirmPassword) {
-
         alert("Passwords do not match.");
         return;
-
     }
 
-    console.log(currentPassword);
-    console.log(newPassword);
+    const token =
+        localStorage.getItem("jwt") ||
+        localStorage.getItem("token");
 
-    // TODO : Change Password API
+    try {
 
-    alert("Password Changed Successfully.");
+        const response = await fetch(
+            BASE_URL + "/api/jobs/change-password",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer " + token
+                },
+                body: JSON.stringify({
+                    currentPassword: currentPassword,
+                    newPassword: newPassword
+                })
+            }
+        );
 
+        const data = await response.json();
+
+        if (response.ok) {
+
+            alert(data.message);
+
+            document.getElementById("currentPassword").value = "";
+            document.getElementById("newPassword").value = "";
+            document.getElementById("confirmPassword").value = "";
+
+        } else {
+
+            alert(data.message || "Password change failed.");
+
+        }
+
+    } catch (error) {
+
+        console.error(error);
+        alert("Server Error.");
+
+    }
 }
-
 
 
 // =======================================
