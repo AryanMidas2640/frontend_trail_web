@@ -1,0 +1,730 @@
+/* =====================================================
+            GOOGLE FONT
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* =====================================================
+                RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:linear-gradient(135deg,#eef4ff,#f8fbff,#ffffff);
+
+    color:#1e293b;
+
+    padding:40px 25px;
+
+}
+
+/* =====================================================
+                CONTAINER
+===================================================== */
+
+.support-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+/* =====================================================
+                HEADER
+===================================================== */
+
+.support-header{
+
+    background:linear-gradient(135deg,#2563eb,#4f46e5,#7c3aed);
+
+    color:#fff;
+
+    border-radius:28px;
+
+    padding:40px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:30px;
+
+    box-shadow:0 20px 45px rgba(37,99,235,.28);
+
+    margin-bottom:40px;
+
+}
+
+.support-icon{
+
+    width:100px;
+
+    height:100px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:42px;
+
+    border:2px solid rgba(255,255,255,.25);
+
+}
+
+.support-header h1{
+
+    font-size:40px;
+
+    margin-bottom:10px;
+
+    font-weight:700;
+
+}
+
+.support-header p{
+
+    line-height:1.8;
+
+    opacity:.95;
+
+    font-size:16px;
+
+}
+
+/* =====================================================
+                CONTACT GRID
+===================================================== */
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+/* =====================================================
+                CONTACT CARD
+===================================================== */
+
+.contact-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.contact-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:linear-gradient(90deg,#2563eb,#7c3aed,#06b6d4);
+
+}
+
+.contact-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 45px rgba(37,99,235,.18);
+
+}
+
+.contact-card i{
+
+    width:75px;
+
+    height:75px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:auto;
+
+    margin-bottom:18px;
+
+    background:#eef4ff;
+
+    color:#2563eb;
+
+    font-size:30px;
+
+    transition:.3s;
+
+}
+
+.contact-card:hover i{
+
+    transform:rotate(12deg) scale(1.08);
+
+    background:#2563eb;
+
+    color:#fff;
+
+}
+
+.contact-card h2{
+
+    color:#1e293b;
+
+    margin-bottom:12px;
+
+    font-size:23px;
+
+}
+
+.contact-card p{
+
+    color:#2563eb;
+
+    font-weight:600;
+
+    margin-bottom:10px;
+
+    font-size:16px;
+
+}
+
+.contact-card span{
+
+    color:#64748b;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+}
+
+/* =====================================================
+                COMMON CARD
+===================================================== */
+
+.support-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:32px;
+
+    margin-bottom:30px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.07);
+
+    border-left:6px solid #2563eb;
+
+    transition:.35s;
+
+}
+
+.support-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 45px rgba(37,99,235,.15);
+
+}
+
+.support-card h2{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    color:#2563eb;
+
+    margin-bottom:25px;
+
+    font-size:24px;
+
+}
+
+.support-card h2 i{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:14px;
+
+    background:#eef4ff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* =====================================================
+                FORM GRID
+===================================================== */
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:22px;
+
+}
+
+.full-width{
+
+    grid-column:1/-1;
+
+}
+
+.input-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.input-group label{
+
+    font-weight:600;
+
+    margin-bottom:10px;
+
+    color:#374151;
+
+}
+
+.input-group input,
+.input-group textarea{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    border:2px solid #dbeafe;
+
+    border-radius:14px;
+
+    outline:none;
+
+    font-size:15px;
+
+    transition:.3s;
+
+    background:#f8fbff;
+
+}
+
+.input-group textarea{
+
+    resize:vertical;
+
+    min-height:160px;
+
+}
+
+.input-group input:focus,
+.input-group textarea:focus{
+
+    border-color:#2563eb;
+
+    background:#fff;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+/* =====================================================
+                SEND BUTTON
+===================================================== */
+
+.primary-btn{
+
+    margin-top:28px;
+
+    padding:15px 38px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(37,99,235,.28);
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 35px rgba(37,99,235,.40);
+
+}
+
+.primary-btn:active{
+
+    transform:scale(.98);
+
+}
+
+/* =====================================================
+                FAQ
+===================================================== */
+
+.faq-item{
+
+    background:#f8fbff;
+
+    border-radius:16px;
+
+    padding:22px;
+
+    margin-bottom:18px;
+
+    border-left:5px solid #2563eb;
+
+    transition:.3s;
+
+}
+
+.faq-item:hover{
+
+    background:#eef5ff;
+
+    transform:translateX(6px);
+
+}
+
+.faq-item h3{
+
+    color:#1e3a8a;
+
+    margin-bottom:10px;
+
+    font-size:18px;
+
+}
+
+.faq-item p{
+
+    color:#555;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+/* =====================================================
+                OFFICE HOURS
+===================================================== */
+
+#officeHours p{
+
+    font-size:16px;
+
+    margin:14px 0;
+
+    color:#555;
+
+}
+
+#officeHours strong{
+
+    color:#2563eb;
+
+}
+
+/* =====================================================
+                SOCIAL LINKS
+===================================================== */
+
+.social-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:22px;
+
+    margin-top:20px;
+
+}
+
+.social-links a{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#eef4ff;
+
+    color:#2563eb;
+
+    text-decoration:none;
+
+    font-size:24px;
+
+    transition:.35s;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+}
+
+.social-links a:hover{
+
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+
+    color:#fff;
+
+    transform:translateY(-6px) rotate(10deg);
+
+    box-shadow:0 15px 30px rgba(37,99,235,.30);
+
+}
+
+/* =====================================================
+                FOOTER
+===================================================== */
+
+.footer{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin:45px 0 20px;
+
+}
+
+.back-btn{
+
+    padding:15px 40px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    transition:.35s;
+
+    box-shadow:0 12px 25px rgba(37,99,235,.30);
+
+}
+
+.back-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 38px rgba(37,99,235,.40);
+
+}
+
+/* =====================================================
+                SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#eef4ff;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#2563eb;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* =====================================================
+                RESPONSIVE
+===================================================== */
+
+@media(max-width:900px){
+
+    .support-header{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:30px;
+
+    }
+
+    .support-icon{
+
+        width:85px;
+
+        height:85px;
+
+        font-size:36px;
+
+    }
+
+    .support-header h1{
+
+        font-size:32px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    body{
+
+        padding:20px 15px;
+
+    }
+
+    .support-card{
+
+        padding:22px;
+
+    }
+
+    .contact-card{
+
+        padding:24px;
+
+    }
+
+    .support-card h2{
+
+        font-size:21px;
+
+    }
+
+    .primary-btn{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    .back-btn{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    .social-links{
+
+        flex-wrap:wrap;
+
+    }
+
+}

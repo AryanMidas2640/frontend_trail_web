@@ -450,3 +450,42 @@ body{background:#f4f7fb;color:#1e293b}
 .m398{margin:38px}
 .m399{margin:39px}
 .m400{margin:0px}
+#profileBtn{
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#2563eb;
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    transition:.3s;
+
+}
+
+#profileBtn:hover{
+
+    background:#1d4ed8;
+
+}
+
+#profileBtn i{
+
+    font-size:15px;
+
+}

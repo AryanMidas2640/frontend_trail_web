@@ -226,3 +226,30 @@ function logout() {
     window.location.href = "login.html";
 
 }
+
+// Privacy Policy
+document.getElementById("privacyPolicyLink").addEventListener("click", function (e) {
+
+    e.preventDefault();
+
+    window.location.href = "../help/privacy.html";
+
+});
+
+// Terms & Conditions
+document.getElementById("termsConditionLink").addEventListener("click", function (e) {
+
+    e.preventDefault();
+
+    window.location.href = "../help/term.html";
+
+});
+
+// Contact Support
+document.getElementById("contactSupportLink").addEventListener("click", function (e) {
+
+    e.preventDefault();
+
+    window.location.href = "../help/contact.html";
+
+});
